@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function Experience() {
     return (
-        <div id="about">
+        <div id="experience">
             <div>
                 <h2 className="text-3xl mb-1 font-extrabold">Work</h2>
                 <h3 className="text-lg">What I Do Best.</h3>

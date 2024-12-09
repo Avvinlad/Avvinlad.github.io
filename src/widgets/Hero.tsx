@@ -7,7 +7,7 @@ export default function HomePage() {
     return (
         <div
             id="homepage"
-            className="flex flex-col h-screen text-center justify-center items-center w-7/12 mx-auto leading-relaxed"
+            className="flex flex-col h-screen text-center justify-center items-center mx-auto leading-relaxed"
         >
             <div className="waving-hand text-8xl mb-4">👋🏽</div>
             <div className="text-6xl">
