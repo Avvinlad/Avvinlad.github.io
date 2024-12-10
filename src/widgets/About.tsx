@@ -8,13 +8,13 @@ export const metadata: Metadata = {
 
 export default function About() {
     return (
-        <div id="about">
+        <div id="about" className="flex flex-col px-8 justify-center mx-auto">
             <div>
                 <h2 className="text-3xl mb-1 font-extrabold">About</h2>
                 <h3 className="text-lg">A quick glimpse of me.</h3>
             </div>
-            <div className="flex flex-row">
-                <div className="flex flex-col w-2/3 mr-32 py-6">
+            <div className="flex flex-col lg:flex-row">
+                <div className="py-6 lg:mr-16">
                     <p>
                         Currently a Software Developer at{" "}
                         <a className="underline font-semibold" href="https://www.brocksolutions.com/" target="_blank">
@@ -27,7 +27,7 @@ export default function About() {
                         Some technologies I have been using:
                     </p>
                     <div className="flex justify-center items-center">
-                        <ul className="grid grid-cols-2 gap-x-48 my-4 list-disc">
+                        <ul className="grid grid-cols-2 my-4 list-disc gap-x-32 xl:gap-x-48">
                             <li>Typescript</li>
                             <li>Next.js</li>
                             <li>C#</li>
@@ -42,8 +42,13 @@ export default function About() {
                         player and lately I've been taking up golf.
                     </p>
                 </div>
-                <div className="min-w-40 self-center drop-shadow-2xl">
-                    <Image src={require("/public/images/me.jpg")} alt="avinlad" width={350} className="rounded-3xl" />
+                <div className="min-w-fit self-center drop-shadow-2xl">
+                    <Image
+                        src={require("/public/images/me.jpg")}
+                        alt="avinlad"
+                        width={200}
+                        className="rounded-3xl md:w-64 xl:w-80"
+                    />
                 </div>
             </div>
         </div>
