@@ -26,7 +26,10 @@ export default function Header() {
     }, [scrollDirection]);
 
     return (
-        <header id="header" className={`sticky flex ${scrollDirection === "down" ? "hidden" : "visible"} lg:top-4`}>
+        <header
+            id="header"
+            className={`sticky flex ${scrollDirection === "down" ? "hidden" : "visible"} top-0 lg:top-4`}
+        >
             {/* DESKTOP MENU */}
             <nav id="desktop" className="hidden lg:flex w-fit mx-auto border-4 rounded-full px-4 py-2 bg-background">
                 <div className="flex gap-4 text-center justify-center items-center">
@@ -36,7 +39,7 @@ export default function Header() {
             </nav>
 
             {/* MOBILE MENU */}
-            <nav id="mobile" className="flex flex-col w-full lg:hidden">
+            <nav id="mobile" className="flex flex-col w-full bg-background lg:hidden">
                 <div className="flex w-full justify-between items-center p-4 xl:hidden">
                     <Image src={require("/public/images/pfp.png")} alt="Avin Lad" width={40} className="rounded-full" />
                     <Menu size={40} onClick={() => setMenuOpen(!menuOpen)} />

@@ -11,7 +11,7 @@ export const fontSans = FontSans({
 export default function App({ Component, pageProps }: AppProps) {
     return (
         <div
-            className={`flex-col mx-auto w-full lg:w-1/2 min-h-screen leading-loose ${cn(
+            className={`flex-col mx-auto w-full lg:w-2/3 min-h-screen leading-loose ${cn(
                 "font-sans",
                 fontSans.variable
             )}`}

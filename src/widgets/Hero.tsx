@@ -7,29 +7,32 @@ export default function HomePage() {
     return (
         <div
             id="homepage"
-            className="flex flex-col h-screen text-center justify-center items-center mx-auto leading-relaxed"
+            className="flex flex-col h-screen text-center justify-center items-center mx-auto gap-y-4 leading-relaxed"
         >
-            <div className="waving-hand text-8xl mb-4">👋🏽</div>
-            <div className="text-6xl">
+            {/* ANIMATION AND HEADING */}
+            <div className="waving-hand mb-4 text-7xl lg:text-8xl">👋🏽</div>
+            <div>
                 <TypeAnimation
                     sequence={["hi! i'm avin.", 2000]}
                     wrapper="span"
                     speed={1}
-                    className="text-6xl font-bold tracking-wide"
+                    className="font-bold text-center tracking-wide text-5xl lg:text-6xl"
                     repeat={Infinity}
                 />
             </div>
-            <div>
-                <span className="text-4xl leading-relaxed">I create things sometimes.</span>
+            {/* TAGLINE */}
+            <div className="flex flex-col">
+                <span className="leading-relaxed text-2xl lg:text-4xl">I create things sometimes.</span>
                 <br />
-                <span className="text-xl leading-relaxed">
+                <span className="leading-relaxed px-8 text-lg lg:text-xl">
                     I'm a software engineer based in Toronto. Aimed at positively impacting large scale products and
                     services.
                 </span>
             </div>
-            <div className="my-4">
+            {/* CONNECT WITH ME */}
+            <div className="my-8">
                 <a href="mailto:avinlad@gmail.com">
-                    <Button className="p-8 text-lg text-center">
+                    <Button className="text-center p-8 text-base lg:text-lg">
                         <Send className="mr-2 h-8 w-8" />
                         Let's Connect!
                     </Button>
