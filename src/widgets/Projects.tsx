@@ -1,24 +1,32 @@
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Music, CandlestickChart, Pi, Github } from "lucide-react";
+
+const ICON_SIZE = 20;
 
 export default function Projects() {
     return (
-        <div id="projects" className="my-4 mb-16">
+        <div id="projects" className="flex flex-col px-8 justify-center mx-auto">
             <div>
                 <h2 className="text-3xl mb-1 font-extrabold">Projects</h2>
                 <h3 className="text-lg">On My Spare Time.</h3>
             </div>
-            <div className="flex my-6">
-                <div className="flex max-w-full">
-                    <Carousel className="">
+            {/* DESKTOP */}
+            <div className="hidden lg:flex justify-center mx-auto my-6 w-2/3 xl:w-full">
+                <div className="flex">
+                    <Carousel className="flex mx-auto">
                         <CarouselContent>
-                            {PROJECTS.map((project, _) => (
+                            {PROJECTS.map((project) => (
                                 <CarouselItem key={project.name}>
                                     <div className="p-2">
-                                        <Card className="">
-                                            <CardContent className="flex h-80 items-center justify-center p-6">
-                                                {project.description}
+                                        <Card>
+                                            <CardContent className="flex items-center justify-center p-6">
+                                                <div>
+                                                    <p className="text-3xl mb-3 font-bold">{project.name}</p>
+                                                    {project.description}
+                                                </div>
                                             </CardContent>
                                         </Card>
                                     </div>
@@ -30,6 +38,39 @@ export default function Projects() {
                     </Carousel>
                 </div>
             </div>
+            {/* MOBILE */}
+            <div className="flex flex-row my-6 mx-auto w-full lg:hidden">
+                <Accordion className="w-full" type="single" defaultValue="item-1">
+                    {PROJECTS.map((project, index) => {
+                        return (
+                            <AccordionItem key={index} value={`item-${index + 1}`}>
+                                <AccordionTrigger>
+                                    <div className="flex items-center gap-x-4">
+                                        <span className="p-2 border-2 rounded-xl">{project.icon}</span>
+                                        <span className="text-center text-xl font-bold">{project.name}</span>
+                                    </div>
+                                </AccordionTrigger>
+                                <AccordionContent>
+                                    <div className="flex flex-col justify-between w-full">
+                                        {/* Text content */}
+                                        <div className="">{project.description}</div>
+
+                                        {/* Button */}
+                                        <div className="flex flex-row justify-end p-4 mr-4">
+                                            <button className="flex border rounded-2xl px-4 py-2 justify-center items-center text-center">
+                                                <Github size={ICON_SIZE} />
+                                                <a href={project.link} target="_blank" className="ml-2 underline">
+                                                    Github
+                                                </a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </AccordionContent>
+                            </AccordionItem>
+                        );
+                    })}
+                </Accordion>
+            </div>
         </div>
     );
 }
@@ -37,13 +78,12 @@ export default function Projects() {
 const PROJECTS = [
     {
         name: "Spotify Analyzer",
+        icon: <Music size={ICON_SIZE} />,
+        link: "https://github.com/avvinlad/spotify_analyzer",
         description: (
             <div className="">
-                <p className="text-3xl mb-3 font-bold">Spotify Analyzer</p>
-                <p className="text-lg font-semibold">
-                    An application for in-depth analysis into your Spotify playlists.
-                </p>
-                <ul className="grid gap-y-2 my-3 list-disc mx-12">
+                <p className="text-lg">An application for in-depth analysis into your Spotify playlists.</p>
+                <ul className="grid gap-y-2 my-3 list-disc mx-8 lg:mx-12">
                     <li>Uses OAuth 2.0 and Spotify API to retrieve account and music information.</li>
                     <li>
                         Extracts information such as song popularity, audio features (tempo, energy, danceability), and
@@ -56,11 +96,12 @@ const PROJECTS = [
     },
     {
         name: "Edgar Search",
+        icon: <CandlestickChart size={ICON_SIZE} />,
+        link: "https://github.com/avvinlad/edgar_search",
         description: (
             <div className="">
-                <p className="text-3xl mb-3 font-bold">EDGAR Search</p>
                 <p className="text-lg font-semibold">Tracking insider stock trades at your favourite companies.</p>
-                <ul className="grid gap-y-2 my-3 list-disc mx-12">
+                <ul className="grid gap-y-2 my-3 list-disc mx-8 lg:mx-12">
                     <li>
                         Leverages the EDGAR Search and Access for publicly traded companies, showing who bought and sold
                         stock.
@@ -72,11 +113,12 @@ const PROJECTS = [
     },
     {
         name: "FindPi",
+        icon: <Pi size={ICON_SIZE} />,
+        link: "https://github.com/avvinlad/FindPi",
         description: (
             <div className="">
-                <p className="text-3xl mb-3 font-bold">FindPI</p>
                 <p className="text-lg font-semibold">How is it we came up with the value of π ?</p>
-                <ul className="grid gap-y-2 my-3 list-disc mx-12">
+                <ul className="grid gap-y-2 my-3 list-disc mx-8 lg:mx-12">
                     <li>
                         There are several ways to solve for π, this creative method is by using a certain number of data
                         points from (0, 1) and a circle.
