@@ -22,10 +22,22 @@ export default function Projects() {
                                 <CarouselItem key={project.name}>
                                     <div className="p-2">
                                         <Card>
-                                            <CardContent className="flex items-center justify-center p-6">
-                                                <div>
-                                                    <p className="text-3xl mb-3 font-bold">{project.name}</p>
-                                                    {project.description}
+                                            <CardContent className="flex items-center justify-center">
+                                                <div className="w-full p-8">
+                                                    <div className="flex flex-row justify-between text-center mb-4">
+                                                        <p className="text-3xl mb-3 font-bold">{project.name}</p>
+                                                        <button className="flex border rounded-2xl px-4 py-2 justify-center items-center text-center">
+                                                            <Github size={ICON_SIZE} />
+                                                            <a
+                                                                href={project.link}
+                                                                target="_blank"
+                                                                className="ml-2 underline"
+                                                            >
+                                                                Github
+                                                            </a>
+                                                        </button>
+                                                    </div>
+                                                    <div>{project.description}</div>
                                                 </div>
                                             </CardContent>
                                         </Card>
