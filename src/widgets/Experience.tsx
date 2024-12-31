@@ -50,16 +50,21 @@ const EXPERIENCE = [
                 <p className="text-md">September 2022 - Present</p>
                 <ul className="grid gap-y-2 my-3 list-disc mx-4">
                     <li>
-                        Created a modern web application to production for efficiently modifying, managing, and
-                        monitoring manufacturing plant and data.
+                        Collaborated on the development of a new test-driven data engine to gather and display airport
+                        baggage and flight information, delivering an accessible interface that improved employee
+                        insights by providing real-time access to critical operational data used by 250+ users.
                     </li>
                     <li>
-                        Streamlined deployments through automation, reducing total deployment time by 25% for mission
-                        critical application.
+                        Developed a modern web application using React and Python for managing manufacturing plant data,
+                        increasing application performance and reducing data fetching time by 20%.
                     </li>
                     <li>
-                        Connected MES application and business communication platform using an API for MES information
-                        transmission between applications.
+                        Streamlined deployments using CI/CD pipeline automation in Azure DevOps, reducing deployment
+                        time by 75% for a mission-critical application.
+                    </li>
+                    <li>
+                        Integrated manufacturing execution system (MES) with Microsoft Teams and email using an
+                        API-driven solution, reducing machine downtime by 50% and improving overall machine efficiency.
                     </li>
                 </ul>
             </div>
@@ -74,16 +79,16 @@ const EXPERIENCE = [
                 <p className="text-md ">January 2022 - April 2022</p>
                 <ul className="grid gap-y-2 my-3 list-disc mx-4">
                     <li>
-                        Boosted stakeholder productivity through the utilization of previously untapped data for
-                        stakeholders by 50%.
+                        Enhanced stakeholder productivity by 50% by analyzing and leveraging untapped MongoDB datasets,
+                        driving data-informed decision-making.
                     </li>
                     <li>
-                        Leveraged Microsoft Power BI to present data-driven reports and support goal setting to various
-                        stakeholders.
+                        Designed and delivered interactive Power BI dashboards, enabling stakeholders to set informed
+                        goals and track key performance metrics effectively.
                     </li>
                     <li>
-                        Consolidated data sources and automated data export from MongoDB for improved membership
-                        management.
+                        Streamlined membership data management by consolidating data sources and automating MongoDB
+                        exports, eliminating 90% of manual tasks.
                     </li>
                 </ul>
             </div>
@@ -98,10 +103,17 @@ const EXPERIENCE = [
                 <p className="text-md ">May 2021 - August 2021</p>
                 <ul className="grid gap-y-2 my-3 list-disc mx-4">
                     <li>
-                        Constructed responsive pages and components using JavaScript for modern UI and user engagement.
+                        Increased user engagement by 25% through the development of responsive web pages and dynamic
+                        components, enhancing overall user experience.
                     </li>
-                    <li>Coordinated cross-team development of large web pages to meet deadlines.</li>
-                    <li>Presented projects to colleagues, incorporating feedback for excellence.</li>
+                    <li>
+                        Ensured 100% on-time deployments by streamlining cross-team coordination for web page
+                        development and addressing bottlenecks proactively.
+                    </li>
+                    <li>
+                        Delivered robust applications by presenting projects to cross-functional teams, integrating peer
+                        feedback, and continuously refining code quality.
+                    </li>
                 </ul>
             </div>
         )
@@ -114,8 +126,14 @@ const EXPERIENCE = [
                 <p className="text-lg lg:text-xl">Junior Developer</p>
                 <p className="text-md ">September 2020 - December 2020</p>
                 <ul className="grid gap-y-2 my-3 list-disc mx-4">
-                    <li>Reduced reported client tickets by 30% from fixing bugs and making enhancements using PHP.</li>
-                    <li>Debugged issues using AWS and Elasticsearch, ensuring long-term success of adjustments.</li>
+                    <li>
+                        Decreased client support tickets by 30% by resolving critical bugs and introducing feature
+                        enhancements, boosting user satisfaction and optimizing system performance.
+                    </li>
+                    <li>
+                        Enhanced data integrity, leveraging AWS services and Elasticsearch for scalable and efficient
+                        database management, removing all database anomalies.
+                    </li>
                 </ul>
             </div>
         )
@@ -129,12 +147,12 @@ const EXPERIENCE = [
                 <p className="text-md ">May 2019 - August 2020</p>
                 <ul className="grid gap-y-2 my-3 list-disc mx-4">
                     <li>
-                        Developed a mobile application using React Native for Clover Flex devices, improving restaurant
-                        table service.
+                        Built a responsive mobile application for Clover Flex devices, streamlining restaurant
+                        management workflows and enhancing operational efficiency by 40%.
                     </li>
                     <li>
-                        Improved app performance by 20% through component render optimizations and API call
-                        optimizations.
+                        Boosted app performance by 20% by optimizing component rendering and API calls, delivering a
+                        smoother and more responsive user experience.
                     </li>
                 </ul>
             </div>
