@@ -1,10 +1,13 @@
 import React from "react";
 import Image from "next/image";
 import { Metadata } from "next";
+import * as Icons from "../lib/DevIcons";
 
 export const metadata: Metadata = {
     title: "About | Avin Lad"
 };
+
+const ICON_SIZE: number = 24;
 
 export default function About() {
     return (
@@ -27,13 +30,17 @@ export default function About() {
                         Some technologies I have been using:
                     </p>
                     <div className="flex justify-center items-center">
-                        <ul className="grid grid-cols-2 my-4 list-disc gap-x-32 xl:gap-x-48">
-                            <li>Typescript</li>
-                            <li>Next.js</li>
-                            <li>C#</li>
-                            <li>.NET</li>
-                            <li>Python</li>
-                            <li>Java</li>
+                        <ul className="grid grid-cols-2 my-4 list-none gap-x-32 xl:gap-x-48 ">
+                            <li className="flex items-center gap-x-2">{Icons.GetReactIcon(ICON_SIZE)}React</li>
+                            <li className="flex items-center gap-x-2">
+                                {Icons.GetTypeScriptIcon(ICON_SIZE)}Typescript
+                            </li>
+                            <li className="flex items-center gap-x-2">{Icons.GetNextJSIcon(ICON_SIZE)}Next.js</li>
+                            <li className="flex items-center gap-x-2">{Icons.GetDockerIcon(ICON_SIZE)}Docker</li>
+                            <li className="flex items-center gap-x-2">{Icons.GetCSharpIcon(ICON_SIZE)}C#</li>
+                            <li className="flex items-center gap-x-2">{Icons.GetDotNetCoreIcon(ICON_SIZE)}.NET</li>
+                            <li className="flex items-center gap-x-2">{Icons.GetPythonIcon(ICON_SIZE)}Python</li>
+                            <li className="flex items-center gap-x-2">{Icons.GetJavaIcon(ICON_SIZE)}Java</li>
                         </ul>
                     </div>
                     <p>
