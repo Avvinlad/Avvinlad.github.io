@@ -2,12 +2,31 @@ import React from "react";
 import Image from "next/image";
 import { Metadata } from "next";
 import * as Icons from "../lib/DevIcons";
+import * as motion from "motion/react-client";
 
 export const metadata: Metadata = {
     title: "About | Avin Lad"
 };
 
 const ICON_SIZE: number = 24;
+
+interface IconLabelProps {
+    icon: (size: number) => JSX.Element;
+    label: string;
+    size?: number;
+}
+
+const IconLabel: React.FC<IconLabelProps> = ({ icon, label, size = 24 }) => {
+    return (
+        <motion.div
+            whileHover={{ scale: 1.25 }}
+            whileTap={{ scale: 0.75 }}
+            className="flex bg-neutral-800 items-center gap-x-2 rounded-lg p-3 m-2"
+        >
+            {icon(size)} {label}
+        </motion.div>
+    );
+};
 
 export default function About() {
     return (
@@ -31,16 +50,14 @@ export default function About() {
                     </p>
                     <div className="flex justify-center items-center">
                         <ul className="grid grid-cols-2 my-4 list-none gap-x-32 xl:gap-x-48 ">
-                            <li className="flex items-center gap-x-2">{Icons.GetReactIcon(ICON_SIZE)}React</li>
-                            <li className="flex items-center gap-x-2">
-                                {Icons.GetTypeScriptIcon(ICON_SIZE)}Typescript
-                            </li>
-                            <li className="flex items-center gap-x-2">{Icons.GetNextJSIcon(ICON_SIZE)}Next.js</li>
-                            <li className="flex items-center gap-x-2">{Icons.GetDockerIcon(ICON_SIZE)}Docker</li>
-                            <li className="flex items-center gap-x-2">{Icons.GetCSharpIcon(ICON_SIZE)}C#</li>
-                            <li className="flex items-center gap-x-2">{Icons.GetDotNetCoreIcon(ICON_SIZE)}.NET</li>
-                            <li className="flex items-center gap-x-2">{Icons.GetPythonIcon(ICON_SIZE)}Python</li>
-                            <li className="flex items-center gap-x-2">{Icons.GetJavaIcon(ICON_SIZE)}Java</li>
+                            <IconLabel icon={Icons.GetReactIcon} label="React" />
+                            <IconLabel icon={Icons.GetTypeScriptIcon} label="Typescript" />
+                            <IconLabel icon={Icons.GetNextJSIcon} label="Next.js" />
+                            <IconLabel icon={Icons.GetDockerIcon} label="Docker" />
+                            <IconLabel icon={Icons.GetCSharpIcon} label="C#" />
+                            <IconLabel icon={Icons.GetDotNetCoreIcon} label=".NET" />
+                            <IconLabel icon={Icons.GetPythonIcon} label="Python" />
+                            <IconLabel icon={Icons.GetJavaIcon} label="Java" />
                         </ul>
                     </div>
                     <p>
