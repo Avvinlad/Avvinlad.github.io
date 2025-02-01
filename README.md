@@ -1,5 +1,7 @@
 # Personal Website
  Hi everyone! This is my personal website, which shares information about me and my career.
+ 
+ Here is a quick link to my website: [avvinlad.github.io](https://avvinlad.github.io/)
 
 ## Tech Stack
 Backend: 
