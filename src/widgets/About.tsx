@@ -20,7 +20,6 @@ const IconLabel: React.FC<IconLabelProps> = ({ icon, label, size = 24 }) => {
     return (
         <motion.div
             whileHover={{ scale: 1.25 }}
-            whileTap={{ scale: 0.75 }}
             className="flex bg-neutral-800 items-center gap-x-2 rounded-lg p-3 m-2"
         >
             {icon(size)} {label}
