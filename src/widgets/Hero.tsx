@@ -23,7 +23,7 @@ export default function HomePage() {
             </div>
             {/* TAGLINE */}
             <div className="flex flex-col">
-                <span className="leading-relaxed text-2xl lg:text-4xl">I create things sometimes.</span>
+                <span className="leading-relaxed text-2xl lg:text-4xl">I like to create things.</span>
                 <br />
                 <span className="leading-relaxed px-8 text-lg lg:text-xl">
                     I'm a software engineer based in Toronto. Aimed at positively impacting large scale products and
