@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Music, CandlestickChart, Pi, Github } from "lucide-react";
+import * as motion from "motion/react-client";
 
 const ICON_SIZE = 20;
 
@@ -26,16 +27,21 @@ export default function Projects() {
                                                 <div className="w-full p-8">
                                                     <div className="flex flex-row justify-between text-center mb-4">
                                                         <p className="text-3xl mb-3 font-bold">{project.name}</p>
-                                                        <button className="flex border rounded-2xl px-4 py-2 justify-center items-center text-center">
-                                                            <Github size={ICON_SIZE} />
-                                                            <a
-                                                                href={project.link}
-                                                                target="_blank"
-                                                                className="ml-2 underline"
-                                                            >
-                                                                Github
-                                                            </a>
-                                                        </button>
+                                                        <motion.div
+                                                            whileHover={{ scale: 1.15 }}
+                                                            whileTap={{ scale: 1.25 }}
+                                                        >
+                                                            <button className="flex border rounded-2xl px-4 py-2 justify-center items-center text-center">
+                                                                <Github size={ICON_SIZE} />
+                                                                <a
+                                                                    href={project.link}
+                                                                    target="_blank"
+                                                                    className="ml-2 underline"
+                                                                >
+                                                                    Github
+                                                                </a>
+                                                            </button>
+                                                        </motion.div>
                                                     </div>
                                                     <div>{project.description}</div>
                                                 </div>
