@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Send } from "lucide-react";
 import { TypeAnimation } from "react-type-animation";
+import * as motion from "motion/react-client";
 
 export default function HomePage() {
     return (
@@ -32,10 +33,12 @@ export default function HomePage() {
             {/* CONNECT WITH ME */}
             <div className="my-8">
                 <a href="mailto:avinlad@gmail.com">
-                    <Button className="text-center p-8 text-base lg:text-lg">
-                        <Send className="mr-2 h-8 w-8" />
-                        Let's Connect!
-                    </Button>
+                    <motion.div whileHover={{ scale: 1.15 }}>
+                        <Button className="text-center p-8 text-base lg:text-lg">
+                            <Send className="mr-2 h-8 w-8" />
+                            Let's Connect!
+                        </Button>
+                    </motion.div>
                 </a>
             </div>
         </div>

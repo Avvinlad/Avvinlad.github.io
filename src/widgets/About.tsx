@@ -16,10 +16,10 @@ interface IconLabelProps {
     size?: number;
 }
 
-const IconLabel: React.FC<IconLabelProps> = ({ icon, label, size = 24 }) => {
+const IconLabel: React.FC<IconLabelProps> = ({ icon, label, size = ICON_SIZE }) => {
     return (
         <motion.div
-            whileHover={{ scale: 1.25 }}
+            whileHover={{ scale: 1.15 }}
             className="flex bg-neutral-800 items-center gap-x-2 rounded-lg p-3 m-2"
         >
             {icon(size)} {label}
